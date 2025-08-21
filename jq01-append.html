@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="discription" content="">
+    <title>append結尾加入內容</title>
+    <!-- 先載入jQuery原生碼 -->
+    <script src="./jquery-3.7.1.min.js"></script>
+    <!-- 自訂jQuery -->
+    <script>
+        // $() = $(document).ready
+        // functiom(){} => 函式小房間 (step.1)
+        // $("button"); => 取得<button>
+        // click() => 偵測執行click這個動作
+        // click(functiom(){}) => click之後的下一步驟函式小房間
+        // $("h2"); => 取得<h2>
+        // append() => 直接執行【結尾加入內容】的動作
+
+        $(function () {
+            $("button").click(function () {
+                $("h2").append("加入的內容!");
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <button>click</button>
+    <h2>原本的內容。</h2>
+    <h2>原本的內容。</h2>
+</body>
+
+</html>

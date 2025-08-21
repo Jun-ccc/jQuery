@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="discription" content="">
+    <title>fading淡出淡入效果</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            color: whitesmoke;
+        }
+
+        .box1 {
+            background-color: rgb(100, 167, 255);
+        }
+
+        .box2 {
+            background-color: rgb(0, 103, 238);
+        }
+
+        .box3 {
+            background-color: rgb(0, 57, 133);
+        }
+
+        .box4 {
+            background-color: rgb(0, 21, 48);
+        }
+    </style>
+</head>
+
+<body>
+    <button>click</button>
+    <div class="box1">fadeIn</div>
+    <div class="box2">fadeOut</div>
+    <div class="box3">fadeToggle</div>
+    <div class="box4">fadeTo</div>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script>
+        $(function () {
+            $('button').click(function () {
+                $('.box1').fadeIn(2000);
+                $('.box2').fadeOut('fast');
+                $('.box3').fadeToggle('slow');
+                $('.box4').fadeTo('', 0.2);
+            });
+        });
+    </script>
+</body>
+
+</html>
